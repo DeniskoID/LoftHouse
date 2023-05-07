@@ -1,5 +1,47 @@
+/* stylelint-disable-next-line import-notation */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&family=Roboto:wght@300&display=swap");
 
 body {
   font-family: $font-main;
+  font-size: 16px;
+  color: $color-light;
+  background-color: $color-dark;
+}
+
+a {
+  color: $color-light;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 1140px;
+}
+
+svg path {
+  transition: all 0.3s ease-in-out;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip-path: inset(50%);
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.title-h2 {
+  font-family: $font-accent;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: $color-accent;
 }

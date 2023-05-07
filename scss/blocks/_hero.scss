@@ -1,0 +1,64 @@
+.hero {
+  background: linear-gradient(180deg, #242b33 11.98%, rgb(45 52 60 / 38%) 51.04%, #242b33 92.19%),
+    url("../images/hero/hero-bg_img.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__container {
+    padding-top: 15.42vw;
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: 582px;
+  }
+
+  &__title {
+    margin-bottom: 81px;
+    font-family: $font-accent;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    color: $color-accent;
+  }
+
+  &__icon {
+    margin-bottom: 10.42vw;
+    text-align: center;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 74px;
+
+    img {
+      margin-right: 14px;
+    }
+  }
+
+  &__footer-item {
+    display: flex;
+  }
+
+  &__footer-item svg {
+    margin-right: 14px;
+  }
+
+  &__footer-item a {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: $color-light;
+  }
+
+  &__footer-item:hover a {
+    color: $color-accent;
+  }
+
+  &__footer-item:hover svg path {
+    fill: $color-accent;
+  }
+}
