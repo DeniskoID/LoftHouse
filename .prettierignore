@@ -1,0 +1,7 @@
+dist/
+tsconfig.json
+.babelrc
+.eslintrc
+package-lock.json
+README.md
+src\.eslintrc
