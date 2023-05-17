@@ -125,6 +125,7 @@ legend {
 /* for footer */
 /* stylelint-disable-next-line import-notation */
 body {
+  overflow-x: hidden;
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   color: #fff;
@@ -171,6 +172,11 @@ svg path {
   color: #d4c17f;
 }
 
+.link-bold {
+  font-weight: 700;
+  color: #d4c17f;
+}
+
 .header {
   position: absolute;
   left: 0;
@@ -191,6 +197,16 @@ svg path {
           align-items: center;
   grid-template-columns: -webkit-max-content 1fr;
   grid-template-columns: max-content 1fr;
+}
+.header__logo {
+  -webkit-transition: -webkit-filter 0.3s ease-in-out;
+  transition: -webkit-filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
+}
+.header__logo:hover {
+  -webkit-filter: drop-shadow(1px 1px 20px #d4c17f);
+          filter: drop-shadow(1px 1px 20px #d4c17f);
 }
 .header__nav {
   margin-left: auto;
@@ -290,6 +306,21 @@ svg path {
   fill: #d4c17f;
 }
 
+.features {
+  position: relative;
+}
+.features::after {
+  content: "II";
+  position: absolute;
+  left: calc(50% + 555px);
+  top: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 400px;
+  line-height: 1.15;
+  opacity: 0.02;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
 .features__container {
   padding-top: 6.25vw;
 }
@@ -316,6 +347,21 @@ svg path {
   color: #fff;
 }
 
+.appartments {
+  position: relative;
+}
+.appartments::before {
+  content: "III";
+  position: absolute;
+  right: calc(50% + 555px);
+  top: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 400px;
+  line-height: 1.15;
+  opacity: 0.02;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
 .appartments__container {
   padding-top: 120px;
 }
@@ -453,6 +499,21 @@ svg path {
   background-color: #a7965a;
 }
 
+.video {
+  position: relative;
+}
+.video::after {
+  content: "IV";
+  position: absolute;
+  left: calc(50% + 555px);
+  top: 50%;
+  font-family: "Playfair Display", serif;
+  font-size: 400px;
+  line-height: 1;
+  opacity: 0.02;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
 .video__container {
   text-align: center;
 }
@@ -489,4 +550,96 @@ svg path {
           transform: translate(-50%, -50%);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+.section-map {
+  position: relative;
+}
+.section-map::before {
+  content: "V";
+  position: absolute;
+  right: calc(50% + 555px);
+  top: 18%;
+  z-index: -1;
+  font-family: "Playfair Display", serif;
+  font-size: 400px;
+  line-height: 1.15;
+  opacity: 0.02;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
+.section-map__container {
+  padding: 180px 0;
+}
+.section-map__title {
+  margin-bottom: 88px;
+}
+.map {
+  height: 358px;
+  background-color: #626262;
+}
+
+.feedback__container {
+  padding-bottom: 180px;
+}
+.feedback__title {
+  margin-bottom: 38px;
+}
+.feedback__form {
+  display: grid;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 35px;
+}
+
+.footer {
+  font-size: 14px;
+  letter-spacing: 0.05rem;
+  background-color: #2d343c;
+}
+.footer__container {
+  padding: 72px 0 51px;
+}
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.footer__logo {
+  margin-top: -12px;
+}
+.footer__logo a {
+  display: inline-block;
+  -webkit-transition: -webkit-filter 0.3s ease-in-out;
+  transition: -webkit-filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
+}
+.footer__logo a:hover {
+  -webkit-filter: drop-shadow(1px 1px 20px #d4c17f);
+          filter: drop-shadow(1px 1px 20px #d4c17f);
+}
+.footer__nav-list {
+  display: grid;
+  gap: 15px;
+}
+.footer__address {
+  display: grid;
+  gap: 20px;
+}
+.footer__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 22px;
+     -moz-column-gap: 22px;
+          column-gap: 22px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }/*# sourceMappingURL=main.css.map */

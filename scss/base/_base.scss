@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&family=Roboto:wght@300&display=swap");
 
 body {
+  overflow-x: hidden;
   font-family: $font-main;
   font-size: 16px;
   color: $color-light;
@@ -43,5 +44,10 @@ svg path {
   font-weight: 700;
   font-size: 36px;
   line-height: 48px;
+  color: $color-accent;
+}
+
+.link-bold {
+  font-weight: 700;
   color: $color-accent;
 }

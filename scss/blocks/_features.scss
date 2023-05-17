@@ -1,4 +1,18 @@
 .features {
+  position: relative;
+
+  &::after {
+    content: "II";
+    position: absolute;
+    left: calc(50% + 555px);
+    top: 0;
+    font-family: $font-accent;
+    font-size: 400px;
+    line-height: 1.15;
+    opacity: 0.02;
+    transform: translate(-50%, 0);
+  }
+
   &__container {
     padding-top: 6.25vw;
   }

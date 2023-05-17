@@ -16,6 +16,14 @@
     grid-template-columns: max-content 1fr;
   }
 
+  &__logo {
+    transition: filter 0.3s ease-in-out;
+
+    &:hover {
+      filter: drop-shadow(1px 1px 20px $color-accent);
+    }
+  }
+
   &__nav {
     margin-left: auto;
   }

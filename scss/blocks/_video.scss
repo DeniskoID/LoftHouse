@@ -1,4 +1,18 @@
 .video {
+  position: relative;
+
+  &::after {
+    content: "IV";
+    position: absolute;
+    left: calc(50% + 555px);
+    top: 50%;
+    font-family: $font-accent;
+    font-size: 400px;
+    line-height: 1;
+    opacity: 0.02;
+    transform: translate(-50%, -50%);
+  }
+
   &__container {
     text-align: center;
   }

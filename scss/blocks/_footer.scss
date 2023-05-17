@@ -1,0 +1,44 @@
+.footer {
+  font-size: 14px;
+  letter-spacing: 0.05rem;
+  background-color: $color-soft-dark;
+
+  &__container {
+    padding: 72px 0 51px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  &__logo {
+    margin-top: -12px;
+
+    a {
+      display: inline-block;
+      transition: filter 0.3s ease-in-out;
+
+      &:hover {
+        filter: drop-shadow(1px 1px 20px $color-accent);
+      }
+    }
+  }
+
+  &__nav-list {
+    display: grid;
+    gap: 15px;
+  }
+
+  &__address {
+    display: grid;
+    gap: 20px;
+  }
+
+  &__socials {
+    display: flex;
+    column-gap: 22px;
+    align-items: center;
+  }
+}
