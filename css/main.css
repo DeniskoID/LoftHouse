@@ -257,9 +257,10 @@ svg path {
   transition: background-color 1000ms linear;
 }
 
-.static-header {
-  -webkit-animation: myAnimin 0.5s ease-in-out 0s 1 normal forwards;
-          animation: myAnimin 0.5s ease-in-out 0s 1 normal forwards;
+.static-header .bg-wrapper {
+  background-color: transparent;
+  -webkit-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
 }
 
 /* stylelint-disable-next-line keyframes-name-pattern */

@@ -136,7 +136,16 @@
 }
 
 .static-header {
-  animation: myAnimin 0.5s ease-in-out 0s 1 normal forwards;
+  // animation: myAnimin 0.5s ease-in-out 0s 1 normal forwards;
+}
+
+.static-header .bg-wrapper {
+  background-color: transparent;
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+
+  // animation: myAnimin 0.5s ease-in-out 0s 1 normal forwards;
 }
 
 /* stylelint-disable-next-line keyframes-name-pattern */
