@@ -178,11 +178,10 @@ svg path {
 }
 
 .header {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
+  position: relative;
   z-index: 100;
+  overflow-y: visible;
+  height: 0;
 }
 .header__container {
   padding-top: 30px;
@@ -247,34 +246,30 @@ svg path {
   width: 100%;
 }
 
-.header_hidden {
-  background-color: transparent;
-  -webkit-transition: background-color 1000ms linear;
-  transition: background-color 1000ms linear;
-  -webkit-animation: myAnim-out 0.7s ease-out 0s 1 normal forwards;
-          animation: myAnim-out 0.7s ease-out 0s 1 normal forwards;
-}
-
-.animate-header-in {
-  background-color: #242b33;
-  -webkit-transition: background-color 1000ms linear;
-  transition: background-color 1000ms linear;
+.fixed-header {
+  position: fixed;
+  width: 100%;
   -webkit-animation: myAnim 0.5s ease-in 0s 1 normal forwards;
           animation: myAnim 0.5s ease-in 0s 1 normal forwards;
 }
 
-.animate-header-out {
-  background-color: transparent;
+.fixed-header .bg-wrapper {
+  background-color: #242b33;
   -webkit-transition: background-color 1000ms linear;
   transition: background-color 1000ms linear;
+}
+
+.static-header {
+  -webkit-animation: myAnimin 0.5s ease-in-out 0s 1 normal forwards;
+          animation: myAnimin 0.5s ease-in-out 0s 1 normal forwards;
 }
 
 /* stylelint-disable-next-line keyframes-name-pattern */
 @-webkit-keyframes myAnim {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
   }
   100% {
     opacity: 1;
@@ -285,8 +280,8 @@ svg path {
 @keyframes myAnim {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
   }
   100% {
     opacity: 1;
@@ -294,24 +289,32 @@ svg path {
             transform: translateY(0);
   }
 }
-@-webkit-keyframes myAnim-out {
+@-webkit-keyframes myAnimin {
   0% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
   100% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
-@keyframes myAnim-out {
+@keyframes myAnimin {
   0% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
   100% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 .hero {
