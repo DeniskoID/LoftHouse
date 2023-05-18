@@ -90,16 +90,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (currentScroll > 1) {
         header.classList.add('fixed-header');
-        header.classList.remove('static-header');
+        // header.classList.remove('static-header');
       } else {
         header.classList.remove('fixed-header');
       }
-      if (currentScroll < prevScroll && currentScroll < 50 && headerFixed()) {
-        header.classList.remove('header_hidden');
-        header.classList.add('static-header');
-      }
+      // if (currentScroll < prevScroll && currentScroll < 50 && headerFixed()) {
+      //   header.classList.add('static-header');
+      // }
 
-      prevScroll = currentScroll; // записываем на сколько прокручена страница на данный момент
+      prevScroll = currentScroll;
     });
   };
 
