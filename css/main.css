@@ -211,6 +211,11 @@ svg path {
 .header__nav {
   margin-left: auto;
 }
+@media screen and (width <= 999px) {
+  .header__nav {
+    display: none;
+  }
+}
 .header__nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -223,6 +228,15 @@ svg path {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+.header__nav-btn {
+  display: none;
+}
+@media screen and (width <= 999px) {
+  .header__nav-btn {
+    display: block;
+    margin-left: auto;
+  }
 }
 
 .nav__link {
@@ -252,9 +266,11 @@ svg path {
 }
 
 .fixed-header .bg-wrapper {
-  background-color: #242b33;
+  background-color: rgba(36, 43, 51, 0.7);
   -webkit-transition: background-color 1000ms linear;
   transition: background-color 1000ms linear;
+  -webkit-backdrop-filter: blur(9px);
+          backdrop-filter: blur(9px);
 }
 
 .static-header .bg-wrapper {
@@ -264,7 +280,7 @@ svg path {
 }
 
 /* stylelint-disable-next-line keyframes-name-pattern */
-@-webkit-keyframes myAnim {
+@-webkit-keyframes headerAnim {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-50px);
@@ -276,7 +292,7 @@ svg path {
             transform: translateY(0);
   }
 }
-@keyframes myAnim {
+@keyframes headerAnim {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-50px);
@@ -288,7 +304,8 @@ svg path {
             transform: translateY(0);
   }
 }
-@-webkit-keyframes myAnimin {
+/* stylelint-disable-next-line keyframes-name-pattern */
+@-webkit-keyframes headerAnimin {
   0% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -302,7 +319,7 @@ svg path {
             transform: translateY(0);
   }
 }
-@keyframes myAnimin {
+@keyframes headerAnimin {
   0% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -316,6 +333,75 @@ svg path {
             transform: translateY(0);
   }
 }
+.nav-icon-btn {
+  --time: 0.1s;
+  --width: 40px;
+  --height: 30px;
+  --line-height: 1px;
+  --line-margin: 2;
+  --color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: var(--width);
+  height: var(--height);
+}
+
+.nav-icon {
+  position: relative;
+  width: var(--width);
+  height: var(--line-height);
+  background-color: var(--color);
+}
+
+.nav-icon::before,
+.nav-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  width: var(--width);
+  height: var(--line-height);
+  background-color: var(--color);
+  -webkit-transition: top var(--time) linear var(--time), -webkit-transform var(--time) ease-in;
+  transition: top var(--time) linear var(--time), -webkit-transform var(--time) ease-in;
+  transition: transform var(--time) ease-in, top var(--time) linear var(--time);
+  transition: transform var(--time) ease-in, top var(--time) linear var(--time), -webkit-transform var(--time) ease-in;
+}
+
+.nav-icon::before {
+  top: calc(var(--line-height) * -8);
+}
+
+.nav-icon::after {
+  top: calc(var(--line-height) * 8);
+}
+
+.nav-icon.nav-icon__active::before,
+.nav-icon.nav-icon__active::after {
+  top: 0;
+  -webkit-transition: top var(--time) linear, -webkit-transform var(--time) ease-in var(--time);
+  transition: top var(--time) linear, -webkit-transform var(--time) ease-in var(--time);
+  transition: top var(--time) linear, transform var(--time) ease-in var(--time);
+  transition: top var(--time) linear, transform var(--time) ease-in var(--time), -webkit-transform var(--time) ease-in var(--time);
+}
+
+.nav-icon.nav-icon__active::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.nav-icon.nav-icon__active::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .hero {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(11.98%, #242b33), color-stop(51.04%, rgba(45, 52, 60, 0.38)), color-stop(92.19%, #242b33)), url("../images/hero/hero-bg_img.jpg");
   background: linear-gradient(180deg, #242b33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242b33 92.19%), url("../images/hero/hero-bg_img.jpg");
