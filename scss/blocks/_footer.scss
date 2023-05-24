@@ -14,8 +14,8 @@
     gap: 30px;
 
     @include small-tablet {
-      margin: 0 auto;
       grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+      margin: 0 auto;
       width: max-content;
     }
   }

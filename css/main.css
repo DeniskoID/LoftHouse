@@ -1033,8 +1033,8 @@ svg path {
 }
 @media (max-width: 768px) {
   .footer__wrapper {
-    margin: 0 auto;
     grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+    margin: 0 auto;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
