@@ -7,6 +7,10 @@
 
   &__container {
     padding-top: 15.42vw;
+
+    @include mobile {
+      padding-top: 120px;
+    }
   }
 
   &__content {
@@ -19,9 +23,14 @@
     font-family: $font-accent;
     font-weight: 700;
     font-size: 48px;
-    line-height: 64px;
+    line-height: 1.5;
     text-align: center;
     color: $color-accent;
+
+    @include mobile {
+      margin-bottom: 50px;
+      font-size: 32px;
+    }
   }
 
   &__icon {
@@ -36,6 +45,12 @@
 
     img {
       margin-right: 14px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 20px;
     }
   }
 
@@ -52,6 +67,10 @@
     font-size: 18px;
     line-height: 21px;
     color: $color-light;
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__footer-item:hover a {

@@ -23,6 +23,12 @@
     grid-template-columns: repeat(4, 1fr);
     margin: 0 auto;
     max-width: 794px;
+
+    @include mobile {
+      column-gap: 30px;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 40px;
+    }
   }
 
   &__item {
@@ -31,13 +37,21 @@
 
   &__image {
     padding-bottom: 2.76vw;
+
+    @include small-tablet {
+      max-width: 70px;
+    }
   }
 
   &__content {
     font-family: $font-secondary;
     font-weight: 300;
     font-size: 20px;
-    line-height: 27px;
+    line-height: 1.2;
     color: $color-light;
+
+    @include small-tablet {
+      font-size: 16px;
+    }
   }
 }

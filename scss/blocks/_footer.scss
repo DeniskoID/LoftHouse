@@ -4,13 +4,20 @@
   background-color: $color-soft-dark;
 
   &__container {
-    padding: 72px 0 51px;
+    padding-top: 72px;
+    padding-bottom: 51px;
   }
 
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+
+    @include small-tablet {
+      margin: 0 auto;
+      grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+      width: max-content;
+    }
   }
 
   &__logo {
@@ -20,7 +27,7 @@
       display: inline-block;
       transition: filter 0.3s ease-in-out;
 
-      &:hover {
+      @include hover {
         filter: drop-shadow(1px 1px 20px $color-accent);
       }
     }

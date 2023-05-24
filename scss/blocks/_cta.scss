@@ -5,16 +5,34 @@
   &__container {
     padding-top: 180px;
     padding-bottom: 180px;
+
+    @include small-tablet {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+
+    @include mobile {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
   }
 
   &__title {
-    padding-bottom: 17px;
+    margin-bottom: 30px;
+
+    @include mobile {
+      margin-bottom: 38px;
+    }
   }
 
   &__inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+
+    @media screen and (width < 900px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__text {
@@ -31,6 +49,12 @@
   grid-template-columns: repeat(2, 1fr);
   row-gap: 35px;
 
+  @include mobile {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  /* stylelint-disable-next-line order/order */
   &__input {
     padding: 16px;
     width: 100%;
@@ -63,7 +87,7 @@
     background-color: $color-accent;
     transition: all 0.3s ease-in-out;
 
-    &:hover {
+    @include hover {
       background-color: #a7965a;
     }
   }

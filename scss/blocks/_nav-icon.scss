@@ -40,16 +40,20 @@
   top: calc(var(--line-height) * 8);
 }
 
-.nav-icon.nav-icon__active::before,
-.nav-icon.nav-icon__active::after {
+.nav-icon.nav-icon--active {
+  background-color: transparent;
+}
+
+.nav-icon.nav-icon--active::before,
+.nav-icon.nav-icon--active::after {
   top: 0;
   transition: top var(--time) linear, transform var(--time) ease-in var(--time);
 }
 
-.nav-icon.nav-icon__active::before {
+.nav-icon.nav-icon--active::before {
   transform: rotate(45deg);
 }
 
-.nav-icon.nav-icon__active::after {
+.nav-icon.nav-icon--active::after {
   transform: rotate(-45deg);
 }

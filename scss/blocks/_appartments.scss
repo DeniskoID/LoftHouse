@@ -15,16 +15,28 @@
 
   &__container {
     padding-top: 120px;
+
+    @include mobile {
+      padding-top: 80px;
+    }
   }
 
   &__title {
-    padding-bottom: 88px;
+    margin-bottom: 88px;
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
   }
 
   &__gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__gallery-item {
@@ -49,8 +61,10 @@
       inset: 15px;
     }
 
-    &:hover::after {
-      opacity: 1;
+    @include hover {
+      &::after {
+        opacity: 1;
+      }
     }
   }
 
@@ -62,5 +76,15 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
+
+    @include mobile {
+      left: 20px;
+      bottom: 20px;
+      font-size: 20px;
+    }
+  }
+
+  &__gallery-img {
+    width: 100%;
   }
 }
