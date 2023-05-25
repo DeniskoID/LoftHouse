@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* stylelint-disable */ /* Reset and base styles  */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&family=Roboto:wght@300&display=swap");
 * {
@@ -191,7 +192,7 @@ svg path {
 }
 
 .no-scroll {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   overflow: hidden;
@@ -305,16 +306,14 @@ svg path {
 .fixed-header {
   position: fixed;
   width: 100%;
-  -webkit-animation: header-anim 0.5s ease-in 0s 1 normal forwards;
-          animation: header-anim 0.5s ease-in 0s 1 normal forwards;
 }
 
 .fixed-header .bg-wrapper {
   background-color: rgba(36, 43, 51, 0.7);
-  -webkit-transition: background-color 1000ms linear;
-  transition: background-color 1000ms linear;
-  -webkit-backdrop-filter: blur(9px);
-          backdrop-filter: blur(9px);
+  -webkit-transition: all 1000ms linear;
+  transition: all 1000ms linear;
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
 }
 
 .static-header .bg-wrapper {
@@ -382,8 +381,6 @@ svg path {
   width: 100%;
   height: 100vh;
   background-color: #242b33;
-  -webkit-animation: mobile-in 0.3s ease-in-out 0s 1 normal forwards;
-          animation: mobile-in 0.3s ease-in-out 0s 1 normal forwards;
 }
 .bg-wrapper--mobile .header__nav-btn {
   position: fixed;
@@ -967,6 +964,55 @@ svg path {
 .map {
   height: 358px;
   background-color: #626262;
+}
+
+/* stylelint-disable declaration-no-important */
+[class*=copyrights-pane] {
+  /* display: none !important; */
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+}
+
+.map:hover [class*=copyrights-pane] {
+  opacity: 1;
+}
+
+/* Создать свою карту */
+[class*=gototech] {
+  display: none !important;
+}
+
+[class*=ground-pane] {
+  -webkit-filter: grayscale(1) sepia(10%);
+          filter: grayscale(1) sepia(10%);
+}
+
+/* Baloon */
+[class*=balloon__layout],
+[class*=balloon__content] {
+  color: #fff !important;
+  background-color: #242b33 !important;
+}
+
+[class*=balloon__tail]::after {
+  background-color: #242b33 !important;
+}
+
+[class*=balloon_layout_panel] {
+  background-color: #242b33 !important;
+}
+
+[class*=balloon__layout],
+[class*=balloon__content] a {
+  color: #d4c17f !important;
+}
+
+[class*=balloon__close-button] {
+  margin: 10px 7px;
+  width: 15px !important;
+  height: 15px !important;
+  background: url("../images/map/cross.svg") 50% no-repeat !important;
 }
 
 .feedback__container {
